@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,500;0,600;0,700;1,400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.slider {
+  background: url(../../../assets/images/Group1258.svg),
+    url(../../../assets/images/Group1257.svg),
+    url(../../../assets/images/kfc.svg), url(../../../assets/images/free.svg);
+  background-size: 353px, 617px, 492px, 300px;
+  background-repeat: no-repeat;
+  background-position: top left, top -220px right 140px,
+    bottom -120px left 200px, bottom -110px right 54px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Urbanist;
+}
+.slider h2 {
+  font-weight: 800;
+  font-size: 48px;
+  margin-bottom: 90px;
+}
+.slide {
+  width: 80%;
+}
+.imgSandwich,
+.imgBurger {
+  width: 180px;
+  margin: auto 0;
+}
+.imgPizza {
+  width: 200px;
+  margin: auto 0;
+  margin-left: 2rem;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+.cardText {
+  margin: 30px 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #a4a4a4;
+  text-align: center;
+}
+.cardPrice {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffc339;
+}
+.slideBox {
+  margin: 0 auto;
+  width: 290px;
+  height: 432px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px dashed #c1c1c1;
+  border-width: 3.5px;
+  align-items: center;
+  transition: 0.2s;
+}
+.slideBox:hover {
+  box-shadow: 0px 4px 20px 0px #ffc339;
+  border: 3.5px solid #ffc339;
+}
+/* bu yerda next va prev buttonlarga style berilgan */
+.mySwiper div:nth-child(-n + 2)::after {
+  background-color: #ffc339;
+  color: #3e4043;
+  padding: 9px 16px;
+  font-size: 28px;
+  font-weight: 600;
+  border-radius: 50%;
+}
+/* lekin next va prev larga berilgan style cardlarga ham tasir etgani uchun bu yerda cardlardan bu stylelarni tozalaganman */
+.mySwiper div:nth-child(3) div {
+  background: none !important;
+  color: #000 !important;
+  padding: 28px 38px !important;
+  border-radius: 20px !important;
+}
+@media screen and (max-width: 1400px) {
+  .slideBox {
+    width: 250px;
+    height: 392px;
+  }
+  .imgBurger,
+  .imgSandwich {
+    width: 150px;
+    margin: auto 0;
+  }
+  .imgPizza {
+    width: 160px;
+  }
+  .cardTitle {
+    font-size: 15px;
+  }
+  .cardText {
+    font-size: 9px;
+  }
+  .cardPrice {
+    font-size: 30px;
+  }
+
+}
+@media screen and (max-width: 1250px) {
+  .slideBox {
+    width: 290px;
+    height: 432px;
+  }
+  .slider {
+    background: url(../../../assets/images/Group1258.svg),
+      url(../../../assets/images/Group1257.svg),
+      url(../../../assets/images/kfc.svg), url(../../../assets/images/free.svg);
+    background-size: 353px, 617px, 492px, 300px;
+    background-repeat: no-repeat;
+    background-position: top left, top -220px right 10px,
+      bottom -120px left 100px, bottom -110px right 54px;
+  }
+  .imgBurger,
+  .imgSandwich {
+    width: 180px;
+    margin: auto 0;
+  }
+  .imgPizza {
+    width: 200px;
+  }
+  .cardTitle {
+    font-size: 18px;
+  }
+  .cardText {
+    font-size: 12px;
+  }
+  .cardPrice {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 970px) {
+  .slideBox {
+    width: 250px;
+    height: 392px;
+  }
+  .slider {
+    background: url(../../../assets/images/Group1258.svg),
+      url(../../../assets/images/Group1257.svg),
+      url(../../../assets/images/kfc.svg), url(../../../assets/images/free.svg);
+    background-size: 303px, 547px, 442px, 250px;
+    background-repeat: no-repeat;
+    background-position: top left, top -120px right -20px,
+      bottom -120px left 70px, bottom -60px right 54px;
+  }
+  .mySwiper div:nth-child(3) div {
+    padding: 18px 23px !important;
+  }
+  .mySwiper div:nth-child(-n + 2)::after {
+    background-color: #ffc339;
+    color: #3e4043;
+    padding: 9px 14px;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 50%;
+  }
+  .imgBurger,
+  .imgSandwich {
+    width: 150px;
+    margin: auto 0;
+  }
+  .imgPizza {
+    width: 160px;
+  }
+  .cardTitle {
+    font-size: 15px;
+  }
+  .cardText {
+    font-size: 12px;
+  }
+  .cardPrice {
+    font-size: 32px;
+  }
+  .slider h2 {
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 90px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .slideBox {
+    width: 200px;
+    height: 322px;
+  }
+  .slider {
+    background: none;
+  }
+  .mySwiper div:nth-child(3) div {
+    padding: 16px 21px !important;
+  }
+  .imgBurger,
+  .imgSandwich {
+    width: 120px;
+    margin: auto 0;
+  }
+  .imgPizza {
+    width: 140px;
+    margin-left: 1rem;
+  }
+  .cardTitle {
+    font-size: 12px;
+  }
+  .cardText {
+    font-size: 9px;
+  }
+  .cardPrice {
+    font-size: 25px;
+  }
+  .mySwiper div:nth-child(-n + 2)::after {
+    background-color: #ffc339;
+    color: #3e4043;
+    padding: 8px 13px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .slideBox {
+    width: 170px;
+    height: 292px;
+  }
+  .slider h2 {
+    font-weight: 800;
+    font-size: 34px;
+    margin-bottom: 80px;
+  }
+  .imgBurger,
+  .imgSandwich {
+    width: 100px;
+    margin: auto 0;
+  }
+  .imgPizza {
+    width: 120px;
+    margin-left: 1rem;
+  }
+  .cardTitle {
+    font-size: 9px;
+  }
+  .cardText {
+    font-size: 7px;
+  }
+  .cardPrice {
+    font-size: 21px;
+  }
+  .mySwiper div:nth-child(3) div {
+    padding: 15px 20px !important;
+  }
+  .mySwiper div:nth-child(-n + 2)::after {
+    background-color: #ffc339;
+    color: #3e4043;
+    padding: 7px 12px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .slideBox {
+    width: 200px;
+    height: 322px;
+  }
+  .slider h2 {
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 90px;
+  }
+  .mySwiper div:nth-child(3) div {
+    padding: 16px 21px !important;
+  }
+  .imgBurger,
+  .imgSandwich {
+    width: 120px;
+    margin: auto 0;
+  }
+  .imgPizza {
+    width: 140px;
+    margin-left: 1rem;
+  }
+  .cardTitle {
+    font-size: 12px;
+  }
+  .cardText {
+    font-size: 9px;
+  }
+  .cardPrice {
+    font-size: 25px;
+  }
+  .mySwiper div:nth-child(-n + 2)::after {
+    background-color: #ffc339;
+    color: #3e4043;
+    padding: 8px 13px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .slideBox {
+    width: 170px;
+    height: 292px;
+  }
+  .slider h2 {
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 70px;
+  }
+  .imgBurger,
+  .imgSandwich {
+    width: 100px;
+    margin: auto 0;
+  }
+  .imgPizza {
+    width: 120px;
+    margin-left: 1rem;
+  }
+  .cardTitle {
+    font-size: 9px;
+  }
+  .cardText {
+    font-size: 7px;
+  }
+  .cardPrice {
+    font-size: 21px;
+  }
+  .mySwiper div:nth-child(3) div {
+    padding: 15px 20px !important;
+  }
+  .mySwiper div:nth-child(-n + 2)::after {
+    background-color: #ffc339;
+    color: #3e4043;
+    padding: 7px 12px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50%;
+  }
+  .slide {
+    width: 90%;
+  }
+}
