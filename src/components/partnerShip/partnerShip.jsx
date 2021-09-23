@@ -2,7 +2,7 @@ import classes from "./partnerShip.module.css";
 import * as yup from "yup";
 import { Formik, Form, ErrorMessage } from "formik";
 function PartnerShip() {
-  const phoneRegex = RegExp(/^[+]{1}?[0-9]{12}?$/);
+  // const phoneRegex = RegExp(/^[+]{1}?[0-9]{p}?$/);
   const validate = yup.object({
     firstName: yup
       .string()
@@ -13,8 +13,11 @@ function PartnerShip() {
       .typeError("There should be letters here")
       .required("Lastname required !"),
     tel: yup
-      .string()
-      .matches(phoneRegex, "Enter the number correctly")
+      .number()
+      .typeError("That doesn't look like a phone number")
+      .positive("A phone number can't start with a minus")
+      .integer("A phone number can't include a decimal point")
+      .min(8)
       .required("Number required !"),
     email: yup
       .string()
@@ -70,7 +73,11 @@ function PartnerShip() {
                   <div className={classes.topInputs}>
                     <div className={classes.inputPanel}>
                       <input
-                       style={touched.firstName&&errors.firstName?{border:'2px solid red'}:{}}
+                        style={
+                          touched.firstName && errors.firstName
+                            ? { border: "2px solid red" }
+                            : {}
+                        }
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.firstName}
@@ -79,13 +86,22 @@ function PartnerShip() {
                         name='firstName'
                         className={classes.input}
                       />
-                      <p  className={`${touched.firstName&&errors.firstName?classes.error:''}`}>
+                      <p
+                        className={`${
+                          touched.firstName && errors.firstName
+                            ? classes.error
+                            : ""
+                        }`}>
                         <ErrorMessage name='firstName' />
                       </p>
                     </div>
                     <div className={classes.inputPanel}>
                       <input
-                      style={touched.lastName&&errors.lastName?{border:'2px solid red'}:{}}
+                        style={
+                          touched.lastName && errors.lastName
+                            ? { border: "2px solid red" }
+                            : {}
+                        }
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.lastName}
@@ -94,7 +110,12 @@ function PartnerShip() {
                         name='lastName'
                         className={classes.input}
                       />
-                      <p className={`${touched.lastName&&errors.lastName?classes.error:''}`}>
+                      <p
+                        className={`${
+                          touched.lastName && errors.lastName
+                            ? classes.error
+                            : ""
+                        }`}>
                         <ErrorMessage name='lastName' />
                       </p>
                     </div>
@@ -102,7 +123,11 @@ function PartnerShip() {
                   <div className={classes.bottomInputs}>
                     <div className={classes.inputPanel}>
                       <input
-                       style={touched.tel&&errors.tel?{border:'2px solid red'}:{}}
+                        style={
+                          touched.tel && errors.tel
+                            ? { border: "2px solid red" }
+                            : {}
+                        }
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.tel}
@@ -111,13 +136,20 @@ function PartnerShip() {
                         name='tel'
                         className={classes.input}
                       />
-                      <p  className={`${touched.tel&&errors.tel?classes.error:''}`}>
+                      <p
+                        className={`${
+                          touched.tel && errors.tel ? classes.error : ""
+                        }`}>
                         <ErrorMessage name='tel' />
                       </p>
                     </div>
                     <div className={classes.inputPanel}>
                       <input
-                       style={touched.email&&errors.email?{border:'2px solid red'}:{}}
+                        style={
+                          touched.email && errors.email
+                            ? { border: "2px solid red" }
+                            : {}
+                        }
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.email}
@@ -126,14 +158,21 @@ function PartnerShip() {
                         name='email'
                         className={classes.input}
                       />
-                      <p  className={`${touched.email&&errors.email?classes.error:''}`}>
+                      <p
+                        className={`${
+                          touched.email && errors.email ? classes.error : ""
+                        }`}>
                         <ErrorMessage name='email' />
                       </p>
                     </div>
                   </div>
                   <div className={classes.inputPanelMessage}>
                     <textarea
-                     style={touched.message&&errors.message?{border:'2px solid red'}:{}}
+                      style={
+                        touched.message && errors.message
+                          ? { border: "2px solid red" }
+                          : {}
+                      }
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.message}
@@ -141,7 +180,10 @@ function PartnerShip() {
                       name='message'
                       className={classes.inputMessage}
                     />
-                    <p  className={`${touched.message&&errors.message?classes.error:''}`}>
+                    <p
+                      className={`${
+                        touched.message && errors.message ? classes.error : ""
+                      }`}>
                       <ErrorMessage name='message' />
                     </p>
                   </div>
