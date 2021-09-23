@@ -52,6 +52,9 @@ border-radius: 15px;
  color: #C0C0C0;
  width: 100%;
 }
+.input,.inputMessage{
+ color: #000;
+}
 .topInputs,.bottomInputs{
  display: flex;
  justify-content: space-between;
