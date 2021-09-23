@@ -18,28 +18,28 @@ function Slide() {
   const data = [
     {
       img: imgSandwich,
-      class:classes.imgSandwich,
+      class: classes.imgSandwich,
       title: "Breakfas Sendwich",
       text: "Dough, Mozzarella, Cheddar, Blue, Parmesan",
       price: "$13",
     },
     {
       img: imgPizza,
-      class:classes.imgPizza,
+      class: classes.imgPizza,
       title: "Sicilian pizza",
       text: "Dough, Mozzarella, Cheddar, Blue, Parmesan",
       price: "$35",
     },
     {
       img: imgBurger,
-      class:classes.imgBurger,
+      class: classes.imgBurger,
       title: "Chesse Burger",
       text: "Dough, Mozzarella, Cheddar, Blue, Parmesan",
       price: "$15",
     },
   ];
-let next=  document.querySelector('.swiper-button-next')
-console.log(next);
+  let next = document.querySelector(".swiper-button-next");
+  console.log(next);
   return (
     <div className={classes.slider}>
       <h2> Popular Recipes</h2>
@@ -50,7 +50,6 @@ console.log(next);
           navigation={true}
           loop={true}
           breakpoints={{
-
             600: {
               slidesPerView: 2,
               spaceBetween: -40,
@@ -75,15 +74,16 @@ console.log(next);
           }}
           className={classes.mySwiper}>
           {data.map((data, idx) => {
-            return(
-            <SwiperSlide className={classes.prev} key={idx}>
-              <div className={classes.slideBox}>
-                <img className={data.class} src={data.img} alt="food" />
-                <h3 className={classes.cardTitle}>{data.title}</h3>
-                <p className={classes.cardText}>{data.text}</p>
-                <h1 className={classes.cardPrice}>{data.price}</h1>
-              </div>
-            </SwiperSlide>)
+            return (
+              <SwiperSlide className={classes.prev} key={idx}>
+                <div className={classes.slideBox}>
+                  <img className={data.class} src={data.img} alt='food' />
+                  <h3 className={classes.cardTitle}>{data.title}</h3>
+                  <p className={classes.cardText}>{data.text}</p>
+                  <h1 className={classes.cardPrice}>{data.price}</h1>
+                </div>
+              </SwiperSlide>
+            );
           })}
         </Swiper>
       </div>

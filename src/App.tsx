@@ -1,7 +1,8 @@
-import Slide from "./components/home/slider/slider";
+import PartnerShip from "./components/partnerShip/partnerShip";
+
 function App() {
   return <div className='App'>
-    <Slide/>
+    <PartnerShip/>
   </div>;
 }
 

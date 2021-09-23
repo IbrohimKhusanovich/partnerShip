@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,500;0,600;0,700;1,400&display=swap");
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ font-family: Urbanist;
+}
+.partnerShip{
+ padding: 66px 108px;
+}
+.headTitle{
+ color: #3E4043;
+ font-weight: 800;
+ font-size: 36px;
+ margin-bottom: 25px;
+}
+.headTextBox p{
+ font-weight: 400;
+ font-size: 20px;
+ color: #808080;
+ line-height: 40px;
+}
+.headTextBox{
+ padding-top: 66px;
+border-top: 1px solid #dedede;
+}
+.formTitle{
+ font-weight: 800;
+ font-size: 24px;
+ color: #3E4043;
+}
+.formPanel{
+margin-top: 10rem;
+}
+
+.input,.inputMessage{
+outline: none;
+border: 1px solid #848484;
+border-radius: 15px;
+ padding: 25px 32px;
+}
+.input:focus,.inputMessage:focus{
+ background-color: #FFC33920;
+ border: 1px solid #FFC339;
+}
+.inputPanel{
+ width: 49%;
+}
+.input,.input::placeholder,.inputMessage,.inputMessage::placeholder{
+ font-size: 18px;
+ font-weight: 300;
+ color: #C0C0C0;
+ width: 100%;
+}
+.topInputs,.bottomInputs{
+ display: flex;
+ justify-content: space-between;
+ width: 100%;
+ margin-bottom: 37px;
+}
+.inputMessage{
+ width: 100%;
+ height: 150px;
+}
+.error{
+ width: 100%;
+color: red;
+padding: 3px 13px;
+border-radius: 5px;
+margin-top: 10px;
+}
+.inputPanelMessage{
+ margin-bottom: 37px;
+
+}
+.inputBox{
+ width: 70%;
+ margin-top: 70px;
+}
+.btnForm{
+ padding: 14px 72px;
+ background: #FFC339;
+ font-weight: 600;
+ font-size: 24px;
+ border-radius: 20px;
+ border: none;
+ cursor: pointer;
+}
+@media screen and (max-width:1024px) {
+.input,.inputMessage{
+ padding: 20px 22px;
+ border-radius: 10px;
+}
+.partnerShip{
+ padding: 44px 80px;
+}
+.input::placeholder,.inputMessage::placeholder,.input,.inputMessage{
+ font-size: 15px;
+}
+.formPanel{
+ margin-top: 7rem;
+}
+.error{
+ font-size: 12px;
+}
+.inputMessage{
+ height: 130px;
+}
+.btnForm{
+ padding: 12px 60px;
+ font-size: 20px;
+ border-radius: 15px;
+}
+.headTextBox p{
+ font-size: 17px;
+ line-height: 30px;
+}
+.headTextBox{
+ padding-top: 44px;
+}
+.headTitle{
+ font-size: 33px;
+}
+.formTitle{
+ font-size: 20px;
+}
+.inputBox{
+ margin-top: 40px;
+}
+.topInputs,.bottomInputs,.inputPanelMessage{
+ margin-bottom: 25px;
+}
+}
+@media screen and (max-width:990px) {
+ .input,.inputMessage{
+  padding: 17px 20px;
+  border-radius: 8px;
+ }
+ .input::placeholder,.inputMessage::placeholder,.input,.inputMessage{
+  font-size: 13px;
+ }
+ .partnerShip{
+  padding: 36px 60px;
+ }
+ .formPanel{
+  margin-top: 5rem;
+ }
+ .error{
+  font-size: 10px;
+ }
+ .inputMessage{
+  height: 115px;
+ }
+ .btnForm{
+  padding: 10px 40px;
+  font-size: 17px;
+  border-radius: 10px;
+ }
+ .headTextBox p{
+  font-size: 14px;
+  line-height: 20px;
+ }
+ .headTextBox{
+  padding-top: 33px;
+ }
+ .headTitle{
+  font-size: 26px;
+ }
+ .formTitle{
+  font-size: 17px;
+ }
+ .inputBox{
+  margin-top: 30px;
+ }
+ .topInputs,.bottomInputs,.inputPanelMessage{
+  margin-bottom: 20px;
+ }
+ }
+@media screen and (max-width:768px) {
+ .input,.inputMessage{
+  padding: 17px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+ }
+ .inputPanel{
+  width: 100%;
+ }
+ .input::placeholder,.inputMessage::placeholder,.input,.inputMessage{
+  font-size: 13px;
+ }
+ .topInputs,.bottomInputs{
+  display: block;
+  margin-bottom: 0;
+ }
+ .partnerShip{
+  padding: 33px 50px;
+ }
+ .formPanel{
+  margin-top: 4rem;
+ }
+ .error{
+  font-size: 10px;
+  margin-top: 0;
+  margin-bottom: 5px;
+ }
+ .inputMessage{
+  height: 110px;
+ }
+ .btnForm{
+  padding: 10px 40px;
+  font-size: 17px;
+  border-radius: 10px;
+ }
+ .headTextBox p{
+  font-size: 11px;
+  line-height: 15px;
+ }
+ .headTextBox{
+  padding-top: 20px;
+ }
+ .headTitle{
+  font-size: 23px;
+  text-align: center;
+ }
+ .formTitle{
+  font-size: 14px;
+  text-align: center;
+ }
+ .inputBox{
+  margin-top: 20px;
+  width: 100%;
+ }
+.inputPanelMessage{
+ margin-bottom: 0;
+}
+ }
+@media screen and (max-width:425px) {
+ .input,.inputMessage{
+  padding: 14px 17px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+ }
+ .inputPanel{
+  width: 100%;
+ }
+ .input::placeholder,.inputMessage::placeholder,.input,.inputMessage{
+  font-size: 10px;
+ }
+ .partnerShip{
+  padding: 23px 30px;
+ }
+ .formPanel{
+  margin-top: 3rem;
+ }
+ .error{
+  font-size: 8px;
+  margin-top: 0;
+  margin-bottom: 5px;
+ }
+ .inputMessage{
+  height: 85px;
+ }
+ .btnForm{
+  padding: 12px 40px;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 8px;
+ }
+ .headTextBox p{
+  font-size: 7px;
+  line-height: 10px;
+ }
+ .headTextBox{
+  padding-top: 10px;
+ }
+ .headTitle{
+  font-size: 19px;
+  text-align: center;
+ }
+ .formTitle{
+  font-size: 12px;
+  text-align: center;
+ }
+ .inputBox{
+  margin-top: 15px;
+  width: 100%;
+ }
+.inputPanelMessage{
+ margin-bottom: 0;
+}
+ }
